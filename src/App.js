@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import bg from './bg.jpg';
+import GetRandomActivity from './components/Get';
+import GetRandomActivityByType from './components/GetByType';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <img className='bg' src={ bg } alt='Background' />
+      <div className='container'>
+        <h2>This app helps you find things to do when you're bored! <br />Just press the button!</h2>
+
+        <GetRandomActivity />
+        <GetRandomActivityByType />
+      </div>
     </div>
   );
 }
-
 export default App;
