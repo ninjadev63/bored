@@ -11,7 +11,7 @@ function GetRandomActivityByType() {
 
     useEffect(() => {
         const getActivityByType = async () => {
-            const res = await fetch(`http://www.boredapi.com/api/activity?type=${type}`);
+            const res = await fetch(`https://www.boredapi.com/api/activity?type=${type}`);
             const result = await res.json();
             console.log(result);
             setActivityByType(result.activity)
